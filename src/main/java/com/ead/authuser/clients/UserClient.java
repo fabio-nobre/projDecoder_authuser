@@ -29,12 +29,11 @@ public class UserClient {
     @Autowired
     UtilsService utilsService;
 
-    @Value("${ead.api.url.course}")
-    String REQUEST_URL_COURSE;
+    String REQUEST_URI = "http://localhost:8082";
 
     public Page<CourseDto> getAllCoursesByUser(UUID userId, Pageable pageable){
         List<CourseDto> searchResult = null;
-        String url = REQUEST_URL_COURSE + utilsService.createUrlGetAllCoursesByUser(userId, pageable);
+        String url = utilsService.createUrlGetAllCoursesByUser(userId, pageable);
         log.debug("Request URL: {} ", url);
         log.info("Request URL: {} ", url);
         try{
