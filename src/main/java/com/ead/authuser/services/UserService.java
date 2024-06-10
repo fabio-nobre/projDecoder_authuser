@@ -27,4 +27,5 @@ public interface UserService {
     void deleteUser(UserModel userModel);
     UserModel updateUser(UserModel userModel);
     UserModel updatePassword(UserModel userModel);
+
 }

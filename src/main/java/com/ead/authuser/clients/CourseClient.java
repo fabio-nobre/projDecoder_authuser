@@ -41,7 +41,7 @@ public class CourseClient {
         List<CourseDto> searchResult = null;
         String url = REQUEST_URL_COURSE + utilsService.createUrlGetAllCoursesByUser(userId, pageable);
         log.debug("Request URL: {} ", url);
-        log.info("Request URL: {} ",    url);
+        log.info("Request URL: {} ", url);
         try{
             ParameterizedTypeReference<ResponsePageDto<CourseDto>> responseType = new ParameterizedTypeReference<ResponsePageDto<CourseDto>>() {};
             ResponseEntity<ResponsePageDto<CourseDto>> result = restTemplate.exchange(url, HttpMethod.GET, null, responseType);

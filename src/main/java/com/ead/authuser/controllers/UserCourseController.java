@@ -38,4 +38,5 @@ public class UserCourseController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(courseClient.getAllCoursesByUser(userId, pageable));
     }
+
 }
